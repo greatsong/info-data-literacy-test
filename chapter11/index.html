@@ -1,0 +1,1818 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="데이터를 읽고, 이해하고, 활용하는 힘을 기르는 고등학교 1학년 대상 12차시 데이터 리터러시 교육 교과서로, 정보 기초부터 데이터 분석과 활용까지 체계적으로 학습합니다.">
+      
+      
+        <meta name="author" content="Created with EduFlow">
+      
+      
+      
+        <link rel="prev" href="../chapter10/">
+      
+      
+        <link rel="next" href="../chapter12/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>우리 학교 데이터 프로젝트 — 문제 정의부터 분석까지 - 정보와 디지털 문해력</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pretendard,+Noto+Sans+KR,+sans-serif:300,300i,400,400i,700,700i%7CJetBrains+Mono,+monospace:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Pretendard, Noto Sans KR, sans-serif";--md-code-font:"JetBrains Mono, monospace"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#11" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href=".." title="정보와 디지털 문해력" class="md-header__button md-logo" aria-label="정보와 디지털 문해력" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            정보와 디지털 문해력
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              우리 학교 데이터 프로젝트 — 문제 정의부터 분석까지
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="다크 모드로 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드로 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="라이트 모드로 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드로 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter01/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 1 - [1권] 정보의 세계로 들어가기
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter05/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 2 - [1권] 데이터 리터러시의 기초
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../chapter09/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 3 - [2권] 데이터 분석과 활용
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="정보와 디지털 문해력" class="md-nav__button md-logo" aria-label="정보와 디지털 문해력" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    정보와 디지털 문해력
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 1 - [1권] 정보의 세계로 들어가기
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 1 - [1권] 정보의 세계로 들어가기
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    정보란 무엇일까? — 데이터, 정보, 지식의 차이
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    디지털 정보의 특성 — 아날로그에서 디지털로
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    정보의 바다에서 살아남기 — 정보 검색과 신뢰성 판단
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    디지털 시민의 권리와 책임 — 저작권, 개인정보, 디지털 윤리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2 - [1권] 데이터 리터러시의 기초
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 2 - [1권] 데이터 리터러시의 기초
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터는 어디에나 있다 — 데이터의 유형과 수집
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 정리의 기술 — 스프레드시트 기초
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    그래프로 말하는 데이터 — 데이터 시각화 기초
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    숫자 뒤에 숨은 이야기 — 기초 통계와 데이터 해석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3 - [2권] 데이터 분석과 활용
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 3 - [2권] 데이터 분석과 활용
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    상관관계와 인과관계 — 데이터로 관계 읽기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터로 이야기하기 — 데이터 스토리텔링
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    우리 학교 데이터 프로젝트 — 문제 정의부터 분석까지
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    우리 학교 데이터 프로젝트 — 문제 정의부터 분석까지
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 이 장에서 배우는 것
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 왜 이걸 배우나요?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 1: 데이터 분석 프로세스 6단계 🔄
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 2: 좋은 탐구 주제의 조건 🎯
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 3: 데이터 수집 계획서 📋
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 4: 기초 분석과 인사이트 도출 🔍
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔨 따라하기: '우리 반 수면 시간' 미니 프로젝트
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔨 따라하기: &#39;우리 반 수면 시간&#39; 미니 프로젝트">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: 문제 정의하기 ✏️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: 데이터 수집하기 📊
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: 데이터 정리하기 🧹
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: 기초 분석하기 📈
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: 시각화하기 🎨
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: 결론 도출하기 📝
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 전체 코드 (스프레드시트 수식 정리)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ 자주 하는 실수
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ 스스로 점검하기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ 스스로 점검하기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기본 문제
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터로 세상에 말 걸기 — 프로젝트 발표와 성찰
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 이 장에서 배우는 것
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 왜 이걸 배우나요?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 1: 데이터 분석 프로세스 6단계 🔄
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 2: 좋은 탐구 주제의 조건 🎯
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 3: 데이터 수집 계획서 📋
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 4: 기초 분석과 인사이트 도출 🔍
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔨 따라하기: '우리 반 수면 시간' 미니 프로젝트
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔨 따라하기: &#39;우리 반 수면 시간&#39; 미니 프로젝트">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: 문제 정의하기 ✏️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: 데이터 수집하기 📊
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: 데이터 정리하기 🧹
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: 기초 분석하기 📈
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: 시각화하기 🎨
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: 결론 도출하기 📝
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 전체 코드 (스프레드시트 수식 정리)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ 자주 하는 실수
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ 스스로 점검하기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ 스스로 점검하기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기본 문제
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="11">11장. 우리 학교 데이터 프로젝트 — 문제 정의부터 분석까지<a class="headerlink" href="#11" title="Permanent link">&para;</a></h1>
+<hr />
+<h2 id="_1">🎯 이 장에서 배우는 것<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 데이터 분석 프로세스(문제 정의→수집→정리→분석→시각화→결론) 6단계를 순서대로 설명할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 학교생활과 관련된 탐구 주제를 선정하고 데이터 수집 계획서를 작성할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 스프레드시트로 수집한 데이터를 정리하고 기초 분석(대푯값, 그래프)을 수행할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 분석 결과에서 의미 있는 패턴이나 인사이트를 발견하고 해석할 수 있다</li>
+</ul>
+<hr />
+<h2 id="_2">💡 왜 이걸 배우나요?<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>여러분은 지금까지 스프레드시트 사용법, 데이터 정리, 시각화, 통계 개념 등을 하나하나 배워왔습니다. 마치 요리 재료 손질법, 칼 쓰는 법, 양념 만드는 법을 각각 연습한 것과 같죠.</p>
+<p>이제 <strong>진짜 요리를 할 시간</strong>입니다! 🍳</p>
+<p>이번 장에서는 배운 기술을 <strong>처음부터 끝까지 하나의 프로젝트에 통합</strong>해서 사용합니다. "우리 학교 급식 만족도는 어떨까?", "통학 시간이 학업에 영향을 줄까?" 같은 <strong>실제 궁금증을 데이터로 탐구</strong>하는 경험을 하게 됩니다.</p>
+<p>이 과정이 중요한 이유는 현실에서 데이터 분석이 항상 이 흐름으로 진행되기 때문입니다. 회사에서, 과학 연구에서, 정책 결정에서 — 모두 "문제 정의부터 분석까지"라는 같은 프로세스를 따릅니다.</p>
+<hr />
+<h2 id="_3">📚 핵심 개념<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="1-6">개념 1: 데이터 분석 프로세스 6단계 🔄<a class="headerlink" href="#1-6" title="Permanent link">&para;</a></h3>
+<p><strong>비유로 시작하기</strong></p>
+<p>데이터 분석은 <strong>요리 과정</strong>과 놀라울 정도로 비슷합니다.</p>
+<ul>
+<li>"오늘 뭐 먹지?" → <strong>문제 정의</strong> (무엇을 알고 싶은가?)</li>
+<li>장보기 → <strong>데이터 수집</strong> (필요한 재료 모으기)</li>
+<li>재료 손질 → <strong>데이터 정리</strong> (쓸 수 있는 형태로 다듬기)</li>
+<li>요리하기 → <strong>데이터 분석</strong> (평균, 비교, 패턴 찾기)</li>
+<li>예쁘게 담기 → <strong>시각화</strong> (그래프와 차트로 보여주기)</li>
+<li>"맛있다!" 평가 → <strong>결론 도출</strong> (발견한 것을 정리하고 의미 해석)</li>
+</ul>
+<p><strong>정확한 정의</strong></p>
+<blockquote>
+<p><strong>데이터 분석 프로세스</strong>란, 궁금한 문제를 데이터를 통해 체계적으로 탐구하고 답을 찾아가는 일련의 단계입니다.</p>
+</blockquote>
+<div class="mermaid">flowchart LR
+    A["1️⃣ 문제 정의"] --&gt; B["2️⃣ 데이터 수집"]
+    B --&gt; C["3️⃣ 데이터 정리"]
+    C --&gt; D["4️⃣ 데이터 분석"]
+    D --&gt; E["5️⃣ 시각화"]
+    E --&gt; F["6️⃣ 결론 도출"]
+    F -.-&gt;|"새로운 궁금증 발생"| A</div>
+<blockquote>
+<p>💡 <strong>생각해보기</strong>: 마지막 단계에서 처음으로 돌아가는 점선 화살표가 보이나요? 분석 결과 새로운 궁금증이 생기면 다시 처음부터 시작할 수 있습니다. 이것이 데이터 분석의 <strong>반복적 특성</strong>입니다.</p>
+</blockquote>
+<p><strong>예시로 확인</strong></p>
+<p>"우리 반 학생들의 수면 시간은 충분할까?"라는 프로젝트를 예로 들면:</p>
+<ul>
+<li><strong>문제 정의</strong>: 우리 반 학생들의 평균 수면 시간은 권장량(8~10시간)에 미치는가?</li>
+<li><strong>데이터 수집</strong>: 설문조사로 30명의 수면 시간 데이터 확보</li>
+<li><strong>데이터 정리</strong>: 빈칸, 이상한 응답(예: "100시간") 처리</li>
+<li><strong>데이터 분석</strong>: 평균, 중앙값 계산, 요일별 비교</li>
+<li><strong>시각화</strong>: 막대그래프, 히스토그램 작성</li>
+<li><strong>결론 도출</strong>: "평일 평균 6.5시간으로 권장량에 미달, 특히 시험 기간에 더 부족"</li>
+</ul>
+<hr />
+<h3 id="2">개념 2: 좋은 탐구 주제의 조건 🎯<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p><strong>비유로 시작하기</strong></p>
+<p>좋은 탐구 주제는 <strong>좋은 질문</strong>에서 시작합니다. "세상은 왜 존재하는가?"는 멋진 질문이지만 데이터로 답하기 어렵죠. 반면 "우리 학교 학생들은 하루에 물을 몇 잔 마실까?"는 데이터로 답할 수 있는 질문입니다.</p>
+<p><strong>좋은 탐구 주제의 4가지 조건</strong></p>
+<ul>
+<li><strong>구체적</strong>: "건강"(❌) → "우리 반 학생들의 하루 수면 시간"(✅)</li>
+<li><strong>측정 가능</strong>: 숫자나 범주로 수집할 수 있는 데이터가 있어야 함</li>
+<li><strong>실현 가능</strong>: 2시간 안에 데이터를 모을 수 있는 범위</li>
+<li><strong>의미 있음</strong>: 결과가 나오면 실제로 도움이 되거나 흥미로운 발견이 있음</li>
+</ul>
+<p><strong>예시 주제 모음</strong></p>
+<ul>
+<li>급식 메뉴별 만족도와 잔반량의 관계</li>
+<li>통학 수단별 소요 시간 비교</li>
+<li>시험 전후 스트레스 수준 변화</li>
+<li>교실 온도와 집중력의 관계</li>
+<li>스마트폰 사용 시간과 수면 시간의 관계</li>
+</ul>
+<blockquote>
+<p>📌 <strong>알아보기</strong>: 탐구 주제를 정할 때 "~은 ~에 영향을 줄까?"라는 형태로 만들면 분석 방향이 자연스럽게 잡힙니다. 이때 영향을 주는 것(원인 후보)을 <strong>독립변수</strong>, 영향을 받는 것(결과)을 <strong>종속변수</strong>라고 합니다.</p>
+</blockquote>
+<hr />
+<h3 id="3">개념 3: 데이터 수집 계획서 📋<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<p><strong>비유로 시작하기</strong></p>
+<p>여행을 떠나기 전에 일정표를 짜듯이, 데이터를 수집하기 전에 <strong>계획서</strong>를 작성합니다. 계획 없이 데이터를 모으면 "이 데이터로 뭘 하지?" 하고 막막해지기 쉽습니다.</p>
+<p><strong>데이터 수집 계획서에 포함할 항목</strong></p>
+<ul>
+<li><strong>탐구 질문</strong>: 무엇을 알고 싶은가? (한 문장으로)</li>
+<li><strong>가설(예상)</strong>: 결과가 어떻게 나올 것 같은가?</li>
+<li><strong>수집 대상</strong>: 누구에게/어디서 데이터를 모을 것인가?</li>
+<li><strong>수집 방법</strong>: 설문조사 / 관찰 기록 / 공공데이터 활용</li>
+<li><strong>수집 항목</strong>: 어떤 질문(열)을 포함할 것인가?</li>
+<li><strong>일정</strong>: 언제까지 수집을 완료할 것인가?</li>
+</ul>
+<p><strong>예시: 수면 시간 프로젝트 계획서</strong></p>
+<ul>
+<li><strong>탐구 질문</strong>: "우리 반 학생들의 평일 수면 시간은 권장량(8시간)에 미치는가?"</li>
+<li><strong>가설</strong>: "대부분 학생들의 수면 시간이 8시간 미만일 것이다"</li>
+<li><strong>수집 대상</strong>: 우리 반 학생 30명</li>
+<li><strong>수집 방법</strong>: 구글 설문지(Google Forms)</li>
+<li><strong>수집 항목</strong>: 성별, 학원 수, 취침 시각, 기상 시각, 낮 졸림 정도(1~5점)</li>
+<li><strong>일정</strong>: 오늘 수업 중 설문 배포, 내일까지 응답 완료</li>
+</ul>
+<hr />
+<h3 id="4">개념 4: 기초 분석과 인사이트 도출 🔍<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<p><strong>비유로 시작하기</strong></p>
+<p>데이터를 모으고 정리한 것은 퍼즐 조각을 테이블 위에 펼쳐놓은 것과 같습니다. 이제 <strong>퍼즐을 맞춰서 그림을 완성</strong>해야 합니다. 기초 분석은 이 퍼즐 맞추기의 첫 단계입니다.</p>
+<p><strong>기초 분석의 3가지 도구</strong></p>
+<ul>
+<li><strong>대푯값(평균, 중앙값, 최빈값)</strong>: 데이터의 중심이 어디인지 파악</li>
+<li><strong>그래프(막대, 원형, 꺾은선)</strong>: 데이터의 분포와 추세를 눈으로 확인</li>
+<li><strong>비교와 상관관계 탐색</strong>: 두 변수 사이에 관련이 있는지 살펴보기</li>
+</ul>
+<blockquote>
+<p>📌 <strong>알아보기</strong>: <strong>인사이트(insight)</strong>란 데이터를 분석해서 발견한 "아하!" 하는 깨달음입니다. 예를 들어 "학원을 3개 이상 다니는 학생의 수면 시간이 평균 1.5시간 더 짧다"는 것은 데이터에서 발견한 인사이트입니다.</p>
+</blockquote>
+<div class="mermaid">flowchart TD
+    A["수집된 원시 데이터"] --&gt; B["대푯값 계산"]
+    A --&gt; C["그래프 작성"]
+    A --&gt; D["그룹별 비교"]
+    B --&gt; E["인사이트 도출"]
+    C --&gt; E
+    D --&gt; E
+    E --&gt; F["결론 및 제안"]</div>
+<hr />
+<h2 id="_4">🔨 따라하기: '우리 반 수면 시간' 미니 프로젝트<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>이제 실제로 프로젝트를 처음부터 끝까지 수행해봅시다. 여기서는 예시 데이터를 사용하지만, 여러분은 실제 설문 데이터로 대체할 수 있습니다.</p>
+<h3 id="step-1">Step 1: 문제 정의하기 ✏️<a class="headerlink" href="#step-1" title="Permanent link">&para;</a></h3>
+<p>탐구 질문을 확정합니다.</p>
+<blockquote>
+<p><strong>탐구 질문</strong>: "우리 반 학생들의 평일 평균 수면 시간은 얼마이며, 학원 수와 수면 시간 사이에 관계가 있을까?"</p>
+<p><strong>가설</strong>: "학원을 많이 다닐수록 수면 시간이 짧을 것이다."</p>
+<p>💡 <strong>생각해보기</strong>: 가설은 "틀려도 괜찮습니다!" 가설이 틀리면 그것 자체가 흥미로운 발견입니다. "학원 수와 수면 시간은 관계가 없다"는 결론도 충분히 가치 있습니다.</p>
+</blockquote>
+<hr />
+<h3 id="step-2">Step 2: 데이터 수집하기 📊<a class="headerlink" href="#step-2" title="Permanent link">&para;</a></h3>
+<p>구글 스프레드시트에 아래와 같은 예시 데이터를 입력합니다. (실제 프로젝트에서는 구글 설문지로 수집한 데이터를 사용하세요.)</p>
+<p><strong>A1셀부터</strong> 다음 데이터를 입력합니다:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>이름    성별    학원수    취침시각    기상시각    수면시간    졸림정도
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>학생1   남      1        23:00      7:00       8.0        2
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>학생2   여      3        0:30       6:30       6.0        4
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>학생3   남      2        23:30      7:00       7.5        3
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>학생4   여      0        22:30      7:00       8.5        1
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>학생5   남      3        1:00       7:00       6.0        5
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>학생6   여      2        23:00      6:30       7.5        3
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>학생7   남      1        23:30      7:00       7.5        2
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>학생8   여      4        1:30       7:00       5.5        5
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>학생9   남      2        0:00       7:00       7.0        3
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>학생10  여      1        23:00      7:00       8.0        2
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>학생11  남      3        0:30       6:30       6.0        4
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>학생12  여      0        22:00      7:00       9.0        1
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>학생13  남      2        23:30      7:00       7.5        3
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>학생14  여      3        1:00       6:30       5.5        5
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>학생15  남      1        23:00      7:00       8.0        2
+</span></code></pre></div>
+<blockquote>
+<p>📌 <strong>알아보기</strong>: 졸림 정도는 1점(전혀 졸리지 않음)~5점(매우 졸림)의 <strong>리커트 척도</strong>로 측정했습니다. 이렇게 주관적 느낌을 숫자로 바꾸면 분석이 가능해집니다.</p>
+</blockquote>
+<hr />
+<h3 id="step-3">Step 3: 데이터 정리하기 🧹<a class="headerlink" href="#step-3" title="Permanent link">&para;</a></h3>
+<p>수집된 데이터에서 문제가 없는지 확인합니다.</p>
+<p><strong>확인할 3가지 체크리스트:</strong></p>
+<ul>
+<li><strong>빈칸 확인</strong>: 응답하지 않은 항목이 있는가? → 있으면 해당 행 제외 또는 별도 표시</li>
+<li><strong>이상값 확인</strong>: 수면 시간이 0시간이나 15시간처럼 비현실적인 값은 없는가?</li>
+<li><strong>형식 통일</strong>: 시간이 "23:00", "11pm", "23시" 등으로 섞여 있지 않은가?</li>
+</ul>
+<p>우리 예시 데이터는 이미 깔끔하지만, 실제 설문에서는 반드시 이 과정이 필요합니다.</p>
+<p>스프레드시트에서 빠르게 확인하는 방법:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>=COUNTA(F2:F16)       → 수면시간 열에 데이터가 몇 개인지 (15가 나와야 정상)
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>=MIN(F2:F16)          → 최솟값 확인 (너무 작지 않은지)
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>=MAX(F2:F16)          → 최댓값 확인 (너무 크지 않은지)
+</span></code></pre></div>
+<hr />
+<h3 id="step-4">Step 4: 기초 분석하기 📈<a class="headerlink" href="#step-4" title="Permanent link">&para;</a></h3>
+<p>이제 핵심 분석을 수행합니다. 새로운 영역(예: I열~J열)에 분석 결과를 정리합니다.</p>
+<p><strong>① 전체 대푯값 계산</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>=AVERAGE(F2:F16)      → 전체 평균 수면 시간 (약 7.17시간)
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>=MEDIAN(F2:F16)       → 중앙값 (7.5시간)
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>=MIN(F2:F16)          → 최솟값 (5.5시간)
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>=MAX(F2:F16)          → 최댓값 (9.0시간)
+</span></code></pre></div>
+<p><strong>② 학원 수별 평균 수면 시간 계산</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>=AVERAGEIF(C2:C16, 0, F2:F16)    → 학원 0개인 학생의 평균 (8.75시간)
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>=AVERAGEIF(C2:C16, 1, F2:F16)    → 학원 1개인 학생의 평균 (8.0시간)
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>=AVERAGEIF(C2:C16, 2, F2:F16)    → 학원 2개인 학생의 평균 (7.38시간)
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>=AVERAGEIF(C2:C16, 3, F2:F16)    → 학원 3개인 학생의 평균 (5.88시간)
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>=AVERAGEIF(C2:C16, 4, F2:F16)    → 학원 4개인 학생의 평균 (5.5시간)
+</span></code></pre></div>
+<blockquote>
+<p>🎉 <strong>발견!</strong> 학원 수가 늘어날수록 수면 시간이 줄어드는 경향이 뚜렷합니다. 학원 0개(8.75시간) → 4개(5.5시간)로 <strong>무려 3.25시간 차이</strong>가 납니다!</p>
+</blockquote>
+<p><strong>③ 졸림 정도와 수면 시간의 상관관계</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>=CORREL(F2:F16, G2:G16)    → 상관계수 (약 -0.98)
+</span></code></pre></div>
+<p>상관계수가 <strong>-0.98</strong>에 가깝다면, 수면 시간이 짧을수록 졸림 정도가 높다는 강한 음의 상관관계가 있습니다.</p>
+<blockquote>
+<p>📌 <strong>정리하기</strong>: 상관계수는 -1에서 +1 사이의 값입니다.
+- <strong>+1에 가까움</strong>: 하나가 증가하면 다른 것도 증가 (양의 상관)
+- <strong>-1에 가까움</strong>: 하나가 증가하면 다른 것은 감소 (음의 상관)
+- <strong>0에 가까움</strong>: 뚜렷한 관계가 없음</p>
+</blockquote>
+<hr />
+<h3 id="step-5">Step 5: 시각화하기 🎨<a class="headerlink" href="#step-5" title="Permanent link">&para;</a></h3>
+<p>분석 결과를 그래프로 만들어 한눈에 보이게 합니다.</p>
+<p><strong>그래프 1: 학원 수별 평균 수면 시간 (막대그래프)</strong></p>
+<ol>
+<li>Step 4에서 계산한 학원 수별 평균 데이터 영역을 선택합니다</li>
+<li><strong>삽입 → 차트</strong> 클릭</li>
+<li>차트 유형을 <strong>세로 막대형</strong>으로 선택</li>
+<li>차트 제목: "학원 수에 따른 평균 수면 시간"</li>
+<li>Y축 제목: "수면 시간(시간)", X축 제목: "학원 수(개)"</li>
+</ol>
+<p><strong>그래프 2: 수면 시간 분포 (히스토그램)</strong></p>
+<ol>
+<li>수면시간 열(F2:F16)을 선택</li>
+<li><strong>삽입 → 차트</strong> → 히스토그램 선택</li>
+<li>차트 제목: "우리 반 수면 시간 분포"</li>
+<li>구간을 1시간 단위로 설정</li>
+</ol>
+<p><strong>그래프 3: 수면 시간 vs 졸림 정도 (분산형 차트)</strong></p>
+<ol>
+<li>수면시간(F열)과 졸림정도(G열)를 함께 선택</li>
+<li><strong>삽입 → 차트</strong> → <strong>분산형(산점도)</strong> 선택</li>
+<li>차트 제목: "수면 시간과 졸림 정도의 관계"</li>
+<li>추세선 추가 (차트 편집 → 맞춤설정 → 계열 → 추세선 체크)</li>
+</ol>
+<div class="mermaid">flowchart LR
+    A["대푯값 계산 결과"] --&gt; D["막대그래프"]
+    B["전체 데이터 분포"] --&gt; E["히스토그램"]
+    C["두 변수 관계"] --&gt; F["산점도"]
+    D --&gt; G["시각적 인사이트"]
+    E --&gt; G
+    F --&gt; G</div>
+<hr />
+<h3 id="step-6">Step 6: 결론 도출하기 📝<a class="headerlink" href="#step-6" title="Permanent link">&para;</a></h3>
+<p>분석과 시각화를 종합하여 결론을 작성합니다. 아래 형식을 따라 작성해보세요.</p>
+<p><strong>결론 작성 템플릿:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>[탐구 질문]
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>우리 반 학생들의 평일 평균 수면 시간은 얼마이며,
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>학원 수와 수면 시간 사이에 관계가 있을까?
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>[주요 발견]
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>1. 우리 반 평균 수면 시간은 7.17시간으로, 권장 수면 시간(8시간)에
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>   미치지 못한다.
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2. 학원 수가 많을수록 수면 시간이 줄어드는 뚜렷한 경향이 있다.
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>   (학원 0개: 8.75시간, 4개: 5.5시간)
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>3. 수면 시간이 짧을수록 낮 졸림 정도가 높다.
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>   (상관계수: -0.98)
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>[가설 검증]
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>&quot;학원을 많이 다닐수록 수면 시간이 짧을 것이다&quot;
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>→ 데이터가 가설을 지지한다. ✅
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>[한계점]
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>- 표본이 15명으로 적어 일반화하기 어렵다.
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>- 수면의 &#39;질&#39;은 측정하지 못했다.
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>- 자기 보고 방식이라 정확하지 않을 수 있다.
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>[제안]
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>- 학교 차원에서 적정 수면 시간 캠페인을 진행하면 좋겠다.
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>- 추가 연구: 주말 수면 시간도 조사하여 비교하면 좋겠다.
+</span></code></pre></div>
+<blockquote>
+<p>💡 <strong>생각해보기</strong>: "한계점"을 쓰는 것이 프로젝트의 질을 떨어뜨린다고 생각하나요? 오히려 반대입니다! 자신의 분석이 완벽하지 않다는 것을 인정하는 것은 <strong>정직한 과학적 태도</strong>이며, 전문가들도 반드시 한계점을 밝힙니다.</p>
+</blockquote>
+<hr />
+<h2 id="_5">📝 전체 코드 (스프레드시트 수식 정리)<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>[데이터 검증]
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>=COUNTA(F2:F16)                    // 데이터 개수 확인
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>=MIN(F2:F16)                       // 최솟값
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>=MAX(F2:F16)                       // 최댓값
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>[전체 대푯값]
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>=AVERAGE(F2:F16)                   // 평균
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>=MEDIAN(F2:F16)                    // 중앙값
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>[조건별 평균 (AVERAGEIF)]
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>=AVERAGEIF(C2:C16, 0, F2:F16)     // 학원 0개 평균
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>=AVERAGEIF(C2:C16, 1, F2:F16)     // 학원 1개 평균
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>=AVERAGEIF(C2:C16, 2, F2:F16)     // 학원 2개 평균
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>=AVERAGEIF(C2:C16, 3, F2:F16)     // 학원 3개 평균
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>=AVERAGEIF(C2:C16, 4, F2:F16)     // 학원 4개 평균
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>[상관관계]
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>=CORREL(F2:F16, G2:G16)           // 두 변수의 상관계수
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>[성별 비교 (추가 분석)]
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>=AVERAGEIF(B2:B16, &quot;남&quot;, F2:F16)  // 남학생 평균 수면시간
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>=AVERAGEIF(B2:B16, &quot;여&quot;, F2:F16)  // 여학생 평균 수면시간
+</span></code></pre></div>
+<hr />
+<h2 id="_6">⚠️ 자주 하는 실수<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p><strong>실수 1: 결론을 먼저 정하고 데이터를 끼워 맞추기</strong> 🚫</p>
+<blockquote>
+<p>"학원이 나쁘다는 걸 증명해야지!"라고 먼저 결론을 정하면, 반대되는 데이터를 무시하게 됩니다. 데이터가 가설과 다른 결과를 보여주면 <strong>그것도 중요한 발견</strong>입니다. 데이터에 정직해야 합니다.</p>
+</blockquote>
+<p><strong>실수 2: 상관관계를 인과관계로 착각하기</strong> 🚫</p>
+<blockquote>
+<p>"학원 수가 많으면 수면 시간이 짧다"(상관관계)와 "학원 때문에 잠을 못 잔다"(인과관계)는 <strong>다릅니다</strong>. 학원을 많이 다니는 학생이 원래 늦게 자는 성향일 수도 있습니다. "A와 B는 관련이 있다"라고 표현하되, "A가 B의 원인이다"라고 단정하지 마세요.</p>
+</blockquote>
+<p><strong>실수 3: 데이터 정리 없이 바로 분석하기</strong> 🚫</p>
+<blockquote>
+<p>빈칸이나 이상값을 처리하지 않으면 평균이 크게 왜곡됩니다. 예를 들어 누군가 수면 시간에 실수로 "80"을 입력했다면, 평균이 크게 올라가 전체 결과가 엉망이 됩니다. <strong>정리 단계를 절대 건너뛰지 마세요!</strong></p>
+</blockquote>
+<p><strong>실수 4: 한 가지 그래프만 보고 판단하기</strong> 🚫</p>
+<blockquote>
+<p>막대그래프만으로는 개별 데이터의 분포를 알 수 없고, 산점도만으로는 전체 평균을 파악하기 어렵습니다. <strong>여러 종류의 그래프를 함께 활용</strong>해야 데이터를 입체적으로 이해할 수 있습니다.</p>
+</blockquote>
+<hr />
+<h2 id="_7">✅ 스스로 점검하기<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h3 id="_8">기본 문제<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p><strong>문제 1.</strong> 데이터 분석 프로세스 6단계를 올바른 순서로 배열하세요.</p>
+<blockquote>
+<p>시각화, 데이터 정리, 결론 도출, 문제 정의, 데이터 분석, 데이터 수집</p>
+</blockquote>
+<details>
+<summary>정답 확인</summary>
+
+문제 정의 → 데이터 수집 → 데이터 정리 → 데이터 분석 → 시각화 → 결론 도출
+
+</details>
+
+<p><strong>문제 2.</strong> 다음 중 좋은 탐구 주제의 조건으로 <strong>적절하지 않은</strong> 것은?</p>
+<ul>
+<li>① 데이터로 측정할 수 있는 구체적인 질문이다</li>
+<li>② 반드시 예상한 가설이 맞아야 한다</li>
+<li>③ 2시간 안에 데이터를 수집할 수 있는 범위이다</li>
+<li>④ 결과가 의미 있</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/title-link.js"></script>
+      
+    
+  </body>
+</html>
